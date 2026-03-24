@@ -96,10 +96,10 @@ rule parameters:
         clock_std_dev = 0.0003
 
 
-## Author
+### Author
 
 * **Thales Bermann, Instituto Todos pela Saúde (ITpS)** - thalesbermann@gmail.com
 
-## License
+### License
 
 This project is licensed under the MIT License.
