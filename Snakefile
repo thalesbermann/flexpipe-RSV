@@ -18,7 +18,7 @@ rule files:
 		new_sequences = "data/new_sequences.fasta",
 		aligned = "config/aligned.fasta",
 		metadata = "data/metadata.tsv",
-		new_metadata = "data/new_metadata.xlsx",
+		new_metadata = "data/new_metadata.tsv",
 		cache = "config/cache_coordinates.tsv",
 		lat_longs = "config/latlongs.tsv",
 		colscheme = "config/name2hue.tsv",
@@ -33,11 +33,11 @@ rule files:
 rule parameters:
 	params:
 		mask_5prime = 44,
-		mask_3prime = 155,
+		mask_3prime = 145,
 		bootstrap = 1000,
 		model = "MFP",
 		root = "least-squares", 
-		clock_rate = 0.0007,
+		clock_rate = 0.0009,
 		clock_std_dev = 0.0003,
 
 rule options:
