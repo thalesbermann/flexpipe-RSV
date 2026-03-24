@@ -94,9 +94,12 @@ rule parameters:
         root = "least-squares",
         clock_rate = 0.007,   # approximate RSV A evolutionary rate. Use = 0.009 for RSV B
         clock_std_dev = 0.0003
+```
 
-# Author
-Thales Bermann, Instituto Todos pela Saúde (ITpS) - thalesbermann@gmail.com
+## Author
 
-# License
+* **Thales Bermann, Instituto Todos pela Saúde (ITpS)** - thalesbermann@gmail.com
+
+## License
+
 This project is licensed under the MIT License.
