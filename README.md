@@ -1,92 +1,104 @@
-# flexpipe
-Flexible nextstrain pipeline for genomic epidemiology of pathogens.
+# flexpipe-RSV
 
-This repository contains the essential files to create a [nextstrain build](https://nextstrain.org/). By using this pipeline users can to perform genomic epidemiology analyses and visualize phylogeographic results to track pathogen spread using genomic data and their associated metadata.
+Nextstrain pipeline for genomic epidemiology of respiratory syncytial virus (RSV). This tool is derived from [flexpipe](https://github.com/InstitutoTodosPelaSaude/flexpipe) and adapted for RSV, similarly to how flexpipe-dengue was created for dengue virus.
 
-![alt text](https://github.com/InstitutoTodosPelaSaude/flexpipe/blob/main/overview.png)
-Nextstrain panel with results overview
+This repository contains all essential files to generate an RSV A and B Nextstrain build. Using this pipeline, users can perform genomic epidemiology analyses, visualize phylogeographic results, and track RSV spread based on genomic data and associated metadata.
+
+![Nextstrain panel with RSV overview](nextstrain_results.svg)
 
 ## Getting started
-<!--- 
-### For Windows users
 
-Native Linux and Mac Users are all set, and can move on to step #2. Windows users, however, must install a Linux subsystem before being able to install nextstrain. Visit [this website](https://docs.nextstrain.org/en/latest/install.html) and follow its step-by-step guide about how to [setup Linux on Windows](https://docs.microsoft.com/en-us/windows/wsl/install-win10) (please choose 'Ubuntu 18.04 LTS or superior versions'), and how to launch Linux and [create a user account and password](https://learn.microsoft.com/en-us/shows/one-dev-minute/how-do-i-configure-a-wsl-distro-to-launch-in-the-home-directory-in-windows-terminal--one-dev-questio) using command line.
--->
-### Learning basic UNIX commands
+To run this pipeline for RSV projects, see the instructions available in the original [flexpipe repository](https://github.com/InstitutoTodosPelaSaude/flexpipe), which covers Unix CLI navigation, installation of a Nextstrain environment with conda/mamba, and a step-by-step tutorial on generating a Nextstrain build (preparing, aligning, and visualizing genomic data).
 
-Familiarize yourself with basic UNIX commands for navigating and managing files and folders in a command line interface ("Terminal"). In this platform you can perform all simple tasks you usually do using mouse clicks: to copy, move, delete, access, and create files and folders. All you need to do is to type a few commands. Below you can find the main commands required to operate in a Terminal. Please access [this page](https://commons.wikimedia.org/wiki/File:Unix_command_cheatsheet.pdf) to learn a few more commands. Please practice the use of the commands listed below, so that you are able to navigate from/to directories ("folders") and manage files and folders in command line interfaces.
+## RSV subsampling (Pathoplexus metadata)
 
-Creating, Moving and Deleting | Navigating directories | Checking content
------------- | ------------- | -------------
-**mkdir** folderX → *create folderX* | **cd** folderX → *move into folderX* | **ls** → *list files and folders*
-**mv** → *move files/folder from/to another directory* | **cd ..** → *go back to previous folder* | **head** → *see the first 10 lines of a file*
-**rm** → *delete files/folders from a directory* | **pwd** → *check you current directory* | **tail** → *see the last 10 lines of a file*
+This repository includes a custom subsampling script designed for respiratory syncytial virus (RSV) datasets derived from Pathoplexus.
 
-<!--- 
-### Installing nextstrain
+### Usage
 
-If you need to install nexstrain in your computer, please [click here](https://github.com/InstitutoTodosPelaSaude/flexpipe/blob/master/nextstrain_installation.pdf) to download the guidelines to install it. That document provides instructions on how to install `augur` (bioinformatics pipeline) and `auspice` (visualization tool). For more information about the installation process, visit this [nextstrain page](https://docs.nextstrain.org/en/latest/install.html).
--->
+Place your metadata file in the working directory with the name: metadata.tsv
 
-### Creating a nextstrain build
-[Click here](https://github.com/InstitutoTodosPelaSaude/flexpipe/blob/master/nextstrain_tutorial.pdf) to download a tutorial with a step-by-step tutorial on how to prepare your working directory (files and folders), run `augur`, and visualize the results with `auspice`. Please check [this webiste](https://neherlab.org/201910_RIVM_nextstrain.html) for more information about the distinct functionalities of nextstrain.
+Then run: python3 subsample_RSV_v4.py
 
-## FAQs
+### Overview Subsampling
+
+This script performs targeted subsampling of RSV genomic metadata to generate datasets suitable for phylogenetic and phylodynamic analyses. It is specifically designed for RSV (both A and B) and assumes the structure and sampling biases typical of Pathoplexus metadata. It is not intended as a general-purpose subsampling tool.
+
+### Filtering and preprocessing
+
+- Includes only sequences collected from **year 2000 onwards**
+- Retains records with:
+  - Complete dates (`YYYY-MM-DD`)
+  - Partial dates (`YYYY-MM`), normalized to the first day of the month
+- Excludes:
+  - Records with only year information
+  - Malformed or missing dates
+
+### Metadata quality scoring
+
+Each sequence is scored based on:
+- Date resolution
+- Geographic detail
+- Optional fields (e.g., genome completeness, sequence length)
+
+Higher-quality records are prioritized during subsampling.
+
+### Lineage handling
+
+- Lineages are truncated to **3 hierarchical levels** (default)
+- Prevents over-fragmentation
+- Original lineage is retained if truncation results in empty values
+
+### Deduplication
+
+- Duplicate accessions are removed
+- Highest-quality record is retained
+- Ties are resolved randomly in a reproducible way
+
+### Subsampling strategy
+
+- All sequences from a **focal country** are retained
+- Other countries:
+  - Subsampling by **country-year**
+  - Up to **20 sequences per country per year**
+  - Maximum of **4 sequences per lineage per country-year**
+
+- Global constraints:
+  - Maximum of **100 sequences per country** (excluding focal country)
+  - Temporal balancing:
+    - ~**200 sequences per year**
+
+### Outputs
+
+The script generates:
+
+- `subsample_accessions.txt` → list of selected accession IDs  
+- `metadata_subsample.tsv` → filtered metadata  
+
+### Sequence extraction
+
+You can extract the corresponding sequences using: seqkit grep -f subsample_accessions.txt global_rsv.fasta > rsv_subsample.fasta
 
 
-### 1. A checkpoint issue during the `rule tree` prevents the flexpipe run to progress. How do I solve that?
+### Adjustments for RSV runs 
 
-If the workflow is executed and it fails to complete the `rule tree`, the previously created files will not allow `iqtree` to resume a new run. As a result, you may see an error message like this:
+The Snakefile provided here is pre-configured for RSV, including RSV-specific parameters such as masking of untranslated regions (`mask_5prime` and `mask_3prime`), evolutionary rate (`clock_rate` and `clock_std_dev`), and root method. Example:
 
-```
-Checkpoint (results/alignments/masked.fasta.ckp.gz) indicates that a previous run successfully finished
-Use `--redo` option if you really want to redo the analysis and overwrite all output files.
-Use `--redo-tree` option if you want to restore ModelFinder and only redo tree search.
-Use `--undo` option if you want to continue previous run when changing/adding options.
-```
-
-To resume the run and solve that issue you need to explicitly asks `iqtree` to `-redo` the phylogenetic inference. To do so, add an argument `--redo` argument in the `iqtree` command line in `rule tree`:
-
-```
-iqtree \
-	-s {input.alignment} \
-	-bb {params.bootstrap} \
-	-nt {params.threads} \
-	-m {params.model} \
-	--redo
-```
-
-### 2. Why does `rule refine` display the message "ERROR: unsupported rooting mechanisms or root not found"?
-
-This error is mostly likely caused by missing root genome(s). For example, if the phylogeny has to be rooted based on the branch leading to the genome 'JF912185', such genome must be listed among the ones in `config/keep.txt`. If the rooting genomes are not included in that file, they will not be included in the alignment, and this error message will be prompted:
-
-```
-augur refine is using TreeTime version 0.9.4
-0.82        TreeTime.reroot: with method or node: JF912185
-
-ERROR: unsupported rooting mechanisms or root not found
-```
-
-'JF912185' is a Yellow Fever Virus (YFV) genome. If you are not running a YFV analysis, you need to add an appropriate genome in `config/keep.txt`, and also change the [root genome(s)](https://github.com/InstitutoTodosPelaSaude/flexpipe/blob/main/Snakefile#L39) listed in `rule parameters` of the Snakefile:
-
-```
+```python
 rule parameters:
-	params:
-		mask_5prime = 142,
-		mask_3prime = 548,
-		bootstrap = 1, # default = 1, but ideally it should be >= 100
-		model = "GTR",
-		
-		root = "JF912185", # <<< set one or more genomes to root the phylogeny
-		
-		clock_rate = 0.0003,
-		clock_std_dev = 0.0001,
-```
+    params:
+        mask_5prime = 44,    
+        mask_3prime = 155,   # Use = 145 for RSV_B_reference.gb
+        bootstrap = 1000,
+        model = "MFP",
+        root = "least-squares",
+        clock_rate = 0.007,   # approximate RSV A evolutionary rate. Use = 0.009 for RSV B
+        clock_std_dev = 0.0003
 
 
 ## Author
 
-* **Anderson Brito, Instituto Todos pela Saúde (ITpS)** - [Website](https://www.itps.org.br/membros) - anderson.brito@itps.org.br
+* **Thales Bermann, Instituto Todos pela Saúde (ITpS)** - thalesbermann@gmail.com
 
 ## License
 
