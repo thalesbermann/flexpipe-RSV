@@ -98,7 +98,7 @@ rule parameters:
 
 ### Author
 
-* **Thales Bermann, Instituto Todos pela Saúde (ITpS)** - thalesbermann@gmail.com
+**Thales Bermann, Instituto Todos pela Saúde (ITpS)** - thalesbermann@gmail.com
 
 ### License
 
