@@ -125,8 +125,6 @@ rule coordinates:
 		cp {output.latlongs} config/cache_coordinates.tsv
 		"""
 
-
-
 rule colours:
 	message:
 		"""
@@ -137,10 +135,12 @@ rule colours:
 		scheme = files.colscheme,
 	params:
 		host = "host_type host",
-		geo = "region division location",
+		lineage = "lineage",
+		geo = "country",
 	output:
 		colours1 = temp("config/col_hosts.tsv"),
 		colours2 = temp("config/col_geo.tsv"),
+		colours3 = temp("config/col_lineage.tsv"),
 		colour_scheme = "config/colour_scheme.tsv",
 	shell:
 		"""
@@ -155,6 +155,12 @@ rule colours:
 			--colours {input.scheme} \
 			--levels {params.geo} \
 			--output {output.colours2}
+
+		python scripts/colour_maker.py \
+			--input {input.matrix} \
+			--colours {input.scheme} \
+			--levels {params.lineage} \
+			--output {output.colours3}
 
 		python scripts/multi_merger.py \
 			--path "./config" \
