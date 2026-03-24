@@ -32,17 +32,17 @@ rule files:
 # Define parameters
 rule parameters:
 	params:
-		mask_5prime = 142,
-		mask_3prime = 548,
-		bootstrap = 1, # default = 1, but ideally it should be >= 100
-		model = "GTR",
-		root = "JF912185", # set one or more genomes to root the phylogeny
-		clock_rate = 0.0003,
-		clock_std_dev = 0.0001,
+		mask_5prime = 44,
+		mask_3prime = 155,
+		bootstrap = 1000,
+		model = "MFP",
+		root = "least-squares", 
+		clock_rate = 0.0007,
+		clock_std_dev = 0.0003,
 
 rule options:
 	params:
-		threads = 1
+		threads = 8
 
 
 options = rules.options.params
@@ -258,8 +258,8 @@ rule tree:
 		"""
 		iqtree \
 			-s {input.alignment} \
-			-b {params.bootstrap} \
-			-nt {params.threads} \
+			-bb {params.bootstrap} \
+			-nt AUTO \
 			-m {params.model}
 
 		mv results/alignments/masked.fasta.treefile {output.tree}
