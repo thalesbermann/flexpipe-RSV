@@ -83,6 +83,7 @@ You can extract the corresponding sequences using: seqkit grep -f subsample_acce
 ### Adjustments for RSV runs 
 
 The Snakefile provided here is pre-configured for RSV, including RSV-specific parameters such as masking of untranslated regions (`mask_5prime` and `mask_3prime`), evolutionary rate (`clock_rate` and `clock_std_dev`), and root method. Example:
+
 ```python
 rule parameters:
     params:
@@ -94,10 +95,8 @@ rule parameters:
         clock_rate = 0.007,   # approximate RSV A evolutionary rate. Use = 0.009 for RSV B
         clock_std_dev = 0.0003
 
-## Author
+# Author
+Thales Bermann, Instituto Todos pela Saúde (ITpS) - thalesbermann@gmail.com
 
-**Thales Bermann, Instituto Todos pela Saúde (ITpS)** - thalesbermann@gmail.com
-
-## License
-
+# License
 This project is licensed under the MIT License.
