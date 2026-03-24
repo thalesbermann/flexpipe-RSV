@@ -4,7 +4,7 @@ Nextstrain pipeline for genomic epidemiology of respiratory syncytial virus (RSV
 
 This repository contains all essential files to generate an RSV A and B Nextstrain build. Using this pipeline, users can perform genomic epidemiology analyses, visualize phylogeographic results, and track RSV spread based on genomic data and associated metadata.
 
-![Nextstrain panel with RSV overview](nextstrain_results.svg)
+![Nextstrain panel with RSV overview](nextstrain_results.png)
 
 ## Getting started
 
