@@ -65,8 +65,7 @@ Higher-quality records are prioritized during subsampling.
 
 - Global constraints:
   - Maximum of **100 sequences per country** (excluding focal country)
-  - Temporal balancing:
-    - ~**200 sequences per year**
+  - Temporal balancing: **200 sequences per year**
 
 ### Outputs
 
