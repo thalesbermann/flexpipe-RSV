@@ -10,6 +10,8 @@ This repository contains all essential files to generate an RSV A and B Nextstra
 
 To run this pipeline for RSV projects, see the instructions available in the original [flexpipe repository](https://github.com/InstitutoTodosPelaSaude/flexpipe), which covers Unix CLI navigation, installation of a Nextstrain environment with conda/mamba, and a step-by-step tutorial on generating a Nextstrain build (preparing, aligning, and visualizing genomic data).
 
+---
+
 ## RSV subsampling (Pathoplexus metadata)
 
 This repository includes a custom subsampling script designed for respiratory syncytial virus (RSV) datasets derived from Pathoplexus.
@@ -18,11 +20,16 @@ This repository includes a custom subsampling script designed for respiratory sy
 
 Place your metadata file in the working directory with the name: metadata.tsv
 
-Then run: python3 subsample_RSV_v4.py
+Then run: 
+```python
+python3 subsample_RSV_v4.py
+```
 
 ### Overview Subsampling
 
-This script performs targeted subsampling of RSV genomic metadata to generate datasets suitable for phylogenetic and phylodynamic analyses. It is specifically designed for RSV (both A and B) and assumes the structure and sampling biases typical of Pathoplexus metadata. It is not intended as a general-purpose subsampling tool.
+This script performs targeted subsampling of RSV genomic metadata to generate datasets suitable for phylogenetic and phylodynamic analyses. 
+It is specifically designed for RSV (both A and B) and assumes the structure and sampling biases typical of Pathoplexus metadata. 
+It is not intended as a general-purpose subsampling tool.
 
 ### Filtering and preprocessing
 
@@ -76,8 +83,12 @@ The script generates:
 
 ### Sequence extraction
 
-You can extract the corresponding sequences using: seqkit grep -f subsample_accessions.txt global_rsv.fasta > rsv_subsample.fasta
+You can extract the corresponding sequences using: 
+```bash
+seqkit grep -f subsample_accessions.txt global_rsv.fasta > rsv_subsample.fasta
+```
 
+---
 
 ### Adjustments for RSV runs 
 
@@ -94,6 +105,7 @@ rule parameters:
         clock_rate = 0.007,   # approximate RSV A evolutionary rate. Use = 0.009 for RSV B
         clock_std_dev = 0.0003
 ```
+---
 
 ## Author
 
