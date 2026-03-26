@@ -107,7 +107,7 @@ rule parameters:
 ```
 ---
 
-## Author
+### Author
 
 * **Thales Bermann, Instituto Todos pela Saúde (ITpS)** - thalesbermann@gmail.com
 
