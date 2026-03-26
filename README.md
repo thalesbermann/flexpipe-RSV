@@ -6,13 +6,13 @@ This repository contains all essential files to generate an RSV A and B Nextstra
 
 ![Nextstrain panel with RSV overview](nextstrain_results.png)
 
-## Getting started
+### Getting started
 
 To run this pipeline for RSV projects, see the instructions available in the original [flexpipe repository](https://github.com/InstitutoTodosPelaSaude/flexpipe), which covers Unix CLI navigation, installation of a Nextstrain environment with conda/mamba, and a step-by-step tutorial on generating a Nextstrain build (preparing, aligning, and visualizing genomic data).
 
 ---
 
-## RSV subsampling (Pathoplexus metadata)
+### RSV subsampling (Pathoplexus metadata)
 
 This repository includes a custom subsampling script designed for respiratory syncytial virus (RSV) datasets derived from Pathoplexus.
 
