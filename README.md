@@ -6,32 +6,31 @@ This repository contains all essential files to generate an RSV A and B Nextstra
 
 ![Nextstrain panel with RSV overview](nextstrain_results.png)
 
-### Getting started
+---
+
+## Getting Started
 
 To run this pipeline for RSV projects, see the instructions available in the original [flexpipe repository](https://github.com/InstitutoTodosPelaSaude/flexpipe), which covers Unix CLI navigation, installation of a Nextstrain environment with conda/mamba, and a step-by-step tutorial on generating a Nextstrain build (preparing, aligning, and visualizing genomic data).
 
 ---
 
-### RSV subsampling (Pathoplexus metadata)
+## RSV Subsampling (Pathoplexus Metadata)
 
-This repository includes a custom subsampling script designed for respiratory syncytial virus (RSV) datasets derived from Pathoplexus.
+This repository includes a custom subsampling script designed for RSV datasets derived from Pathoplexus.
 
 ### Usage
 
-Place your metadata file in the working directory with the name: metadata.tsv
+Place your metadata file in the working directory with the name `metadata.tsv`, then run:
 
-Then run: 
 ```python
 python3 subsample_RSV_v4.py
 ```
 
-### Overview Subsampling
+### Overview
 
-This script performs targeted subsampling of RSV genomic metadata to generate datasets suitable for phylogenetic and phylodynamic analyses. 
-It is specifically designed for RSV (both A and B) and assumes the structure and sampling biases typical of Pathoplexus metadata. 
-It is not intended as a general-purpose subsampling tool.
+This script performs targeted subsampling of RSV genomic metadata to generate datasets suitable for phylogenetic and phylodynamic analyses. It is specifically designed for RSV (both A and B) and assumes the structure and sampling biases typical of Pathoplexus metadata. It is not intended as a general-purpose subsampling tool.
 
-### Filtering and preprocessing
+### Filtering and Preprocessing
 
 - Includes only sequences collected from **year 2000 onwards**
 - Retains records with:
@@ -41,16 +40,17 @@ It is not intended as a general-purpose subsampling tool.
   - Records with only year information
   - Malformed or missing dates
 
-### Metadata quality scoring
+### Metadata Quality Scoring
 
 Each sequence is scored based on:
+
 - Date resolution
 - Geographic detail
 - Optional fields (e.g., genome completeness, sequence length)
 
 Higher-quality records are prioritized during subsampling.
 
-### Lineage handling
+### Lineage Handling
 
 - Lineages are truncated to **3 hierarchical levels** (default)
 - Prevents over-fragmentation
@@ -62,14 +62,13 @@ Higher-quality records are prioritized during subsampling.
 - Highest-quality record is retained
 - Ties are resolved randomly in a reproducible way
 
-### Subsampling strategy
+### Subsampling Strategy
 
 - All sequences from a **focal country** are retained
 - Other countries:
   - Subsampling by **country-year**
   - Up to **20 sequences per country per year**
   - Maximum of **4 sequences per lineage per country-year**
-
 - Global constraints:
   - Maximum of **100 sequences per country** (excluding focal country)
   - Temporal balancing: **200 sequences per year**
@@ -78,39 +77,46 @@ Higher-quality records are prioritized during subsampling.
 
 The script generates:
 
-- `subsample_accessions.txt` → list of selected accession IDs  
-- `metadata_subsample.tsv` → filtered metadata  
+| File | Description |
+|------|-------------|
+| `subsample_accessions.txt` | List of selected accession IDs |
+| `metadata_subsample.tsv` | Filtered metadata |
 
-### Sequence extraction
+### Sequence Extraction
 
-You can extract the corresponding sequences using: 
+Extract the corresponding sequences using:
+
 ```bash
 seqkit grep -f subsample_accessions.txt global_rsv.fasta > rsv_subsample.fasta
 ```
 
 ---
 
-### Adjustments for RSV runs 
+## Adjustments for RSV Runs
 
-The Snakefile provided here is pre-configured for RSV, including RSV-specific parameters such as masking of untranslated regions (`mask_5prime` and `mask_3prime`), evolutionary rate (`clock_rate` and `clock_std_dev`), and root method. Example:
+The Snakefile provided here is pre-configured for RSV, including RSV-specific parameters such as masking of untranslated regions (`mask_5prime` and `mask_3prime`), evolutionary rate (`clock_rate` and `clock_std_dev`), and root method.
 
 ```python
 rule parameters:
     params:
-        mask_5prime = 44,    
-        mask_3prime = 155,   # Use = 145 for RSV_B_reference.gb
+        mask_5prime = 44,
+        mask_3prime = 155,    # Use 145 for RSV_B_reference.gb
         bootstrap = 1000,
         model = "MFP",
         root = "least-squares",
-        clock_rate = 0.007,   # approximate RSV A evolutionary rate. Use = 0.009 for RSV B
+        clock_rate = 0.007,   # Approximate RSV A evolutionary rate. Use 0.009 for RSV B
         clock_std_dev = 0.0003
 ```
+
 ---
 
-### Author
+## Author
 
-* **Thales Bermann, Instituto Todos pela Saúde (ITpS)** - thalesbermann@gmail.com
+**Thales Bermann** — Instituto Todos pela Saúde (ITpS)
+✉️ [thalesbermann@gmail.com](mailto:thalesbermann@gmail.com)
+
+---
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
