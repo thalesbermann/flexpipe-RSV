@@ -1,0 +1,106 @@
+field	value	hex_color
+continent	Africa	#C5490C
+continent	Asia	#A6C50C
+continent	Europe	#0CC549
+continent	Europe/Asia	#0CA6C5
+continent	North America	#0C0CC5
+continent	Oceania	#A60CC5
+continent	South America	#C50C49
+country	Comoros	#662200
+country	Cote d'Ivoire	#B64209
+country	Egypt	#E86D30
+country	Kenya	#EAA887
+country	South Africa	#F5E0D6
+country	China	#556600
+country	Hong Kong	#6B8002
+country	Japan	#809805
+country	Jordan	#94B008
+country	Kuwait	#A8C70D
+country	Lebanon	#BCDD12
+country	Mongolia	#C8E922
+country	Nepal	#CCE83E
+country	Philippines	#D1E859
+country	South Korea	#D6E974
+country	Sri Lanka	#DCEB8E
+country	Taiwan	#E2EDA7
+country	Thailand	#E9F1BF
+country	Viet Nam	#F0F5D6
+country	Austria	#006622
+country	Belgium	#02842D
+country	Finland	#06A139
+country	France	#0BBD45
+country	Germany	#11D752
+country	Ireland	#1FE961
+country	Italy	#41E877
+country	Netherlands	#61E88D
+country	Slovakia	#80EAA2
+country	Spain	#9EECB7
+country	Switzerland	#BAF0CC
+country	United Kingdom	#D6F5E0
+country	Russia	#0CA6C5
+country	Canada	#000066
+country	Mexico	#0909B6
+country	Nicaragua	#3030E8
+country	Panama	#8787EA
+country	USA	#D6D6F5
+country	Australia	#8C07A7
+country	New Zealand	#DE98EC
+country	Argentina	#87032F
+country	Brazil	#E8306D
+country	Peru	#F0B8CA
+data_use	open	#0C88C5
+data_use	restricted	#C50C0C
+host	Homo sapiens	#0C88C5
+host	Mus musculus	#880CC5
+host	Unknown	#C50C49
+lineage_truncated	A	#C50C0C
+lineage_truncated	A.2.1	#C52B0C
+lineage_truncated	A.3	#C5880C
+lineage_truncated	A.3.1	#C5A60C
+lineage_truncated	A.D	#0CC50C
+lineage_truncated	A.D.1	#0CC52B
+lineage_truncated	A.D.2	#0CC5C5
+lineage_truncated	A.D.3	#0C0CC5
+lineage_truncated	A.D.4	#C50CC5
+lineage_truncated	A.D.5	#C50C2B
+lineage	A	#C50C0C
+lineage	A.2.1	#A72107
+lineage	A.2.1.1	#ECA598
+lineage	A.3	#C5880C
+lineage	A.3.1	#A78C07
+lineage	A.3.1.1	#ECDE98
+lineage	A.D	#0CC50C
+lineage	A.D.1	#006611
+lineage	A.D.1.1	#028418
+lineage	A.D.1.10	#06A120
+lineage	A.D.1.11	#0BBD28
+lineage	A.D.1.2	#11D731
+lineage	A.D.1.3	#1FE940
+lineage	A.D.1.4	#41E85C
+lineage	A.D.1.5	#61E877
+lineage	A.D.1.6	#80EA91
+lineage	A.D.1.7	#9EECAA
+lineage	A.D.1.8	#BAF0C3
+lineage	A.D.1.9	#D6F5DB
+lineage	A.D.2	#006666
+lineage	A.D.2.1	#0CC5C5
+lineage	A.D.2.2	#54E8E8
+lineage	A.D.2.2.1	#B8F0F0
+lineage	A.D.3	#000066
+lineage	A.D.3.1	#03038B
+lineage	A.D.3.10	#0808AD
+lineage	A.D.3.11	#0E0ECF
+lineage	A.D.3.12	#1B1BE9
+lineage	A.D.3.2	#4444E8
+lineage	A.D.3.3	#6B6BE9
+lineage	A.D.3.4	#9191EB
+lineage	A.D.3.7	#B4B4EF
+lineage	A.D.3.9	#D6D6F5
+lineage	A.D.4	#A707A7
+lineage	A.D.4.1	#EC98EC
+lineage	A.D.5	#660011
+lineage	A.D.5.1	#C50C2B
+lineage	A.D.5.2	#E8546C
+lineage	A.D.5.3	#F0B8C1
+source	ITpS	#69C50C
+source	Pathoplexus	#C5690C

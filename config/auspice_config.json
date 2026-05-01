@@ -1,0 +1,109 @@
+{
+  "title": "RSV A",
+
+  "data_provenance": [
+    {
+      "name": "Pathoplexus",
+      "url": "https://pathoplexus.org/"
+    },
+    {
+      "name": "NCBI Virus / GenBank",
+      "url": "https://www.ncbi.nlm.nih.gov/labs/virus/vssi/"
+    }
+  ],
+
+  "build_url": "https://github.com/InstitutoTodosPelaSaude/flexpipe",
+
+  "maintainers": [
+    {
+      "name": "Thales Bermann",
+      "url": "https://github.com/thalesbermann"
+    }
+  ],
+
+  "colorings": [
+    {
+      "key": "source",
+      "title": "Source",
+      "type": "categorical"
+    },
+    {
+      "key": "country",
+      "title": "Country",
+      "type": "categorical"
+    },
+    {
+      "key": "lineage",
+      "title": "Lineage",
+      "type": "categorical"
+    },
+    {
+      "key": "division",
+      "title": "Division",
+      "type": "categorical"
+    },
+    {
+      "key": "location",
+      "title": "Location",
+      "type": "categorical"
+    },
+    {
+      "key": "host",
+      "title": "Host",
+      "type": "categorical"
+    },
+    {
+      "key": "author",
+      "title": "Authors",
+      "type": "categorical"
+    },
+    {
+      "key": "orig_lab_name",
+      "title": "Originating Lab",
+      "type": "categorical"
+    },
+    {
+      "key": "subm_lab_name",
+      "title": "Submitting Lab",
+      "type": "categorical"
+    },
+    {
+      "key": "data_use",
+      "title": "Data Use Term",
+      "type": "categorical"
+    }
+  ],
+
+  "geo_resolutions": [
+    "country",
+    "division",
+    "location"
+  ],
+
+  "display_defaults": {
+    "color_by": "lineage",
+    "distance_measure": "num_date",
+    "geo_resolution": "country",
+    "map_triplicate": true,
+    "branch_label": "clade"
+  },
+
+  "filters": [
+    "country",
+    "division",
+    "location",
+    "author",
+    "host",
+    "lineage",
+    "source",
+    "orig_lab_name",
+    "subm_lab_name",
+    "data_use"
+  ],
+
+  "panels": [
+    "tree",
+    "map",
+    "entropy"
+  ]
+}
