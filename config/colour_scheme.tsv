@@ -1,0 +1,228 @@
+field	value	hex_color
+host	Homo sapiens	#0C88C5
+host	house mouse; mouse	#880CC5
+host	human	#0C88C5
+
+region	Africa	#C5490C
+region	Asia	#A6C50C
+region	Europe	#0CC549
+region	North America	#0C0CC5
+region	Oceania	#A60CC5
+region	South America	#C50C49
+
+country	Cameroon	#662200
+country	Comoros	#953404
+country	Cote d'Ivoire	#C1470B
+country	Egypt	#EA5B15
+country	Kenya	#E87E4A
+country	South Africa	#EA9F7B
+country	Tunisia	#EEC0AA
+country	Zambia	#F5E0D6
+country	China	#556600
+country	Hong Kong	#687C02
+country	India	#7A9204
+country	Iraq	#8CA707
+country	Japan	#9EBB0A
+country	Jordan	#AFCF0E
+country	Kuwait	#C0E213
+country	Lebanon	#C9E924
+country	Mongolia	#CCE83C
+country	Nepal	#D0E854
+country	Philippines	#D4E96B
+country	South Korea	#D9EA82
+country	Sri Lanka	#DEEC98
+country	Taiwan	#E4EEAD
+country	Thailand	#EAF1C2
+country	Viet Nam	#F0F5D6
+country	Austria	#006622
+country	Belgium	#02822D
+country	Finland	#059C37
+country	France	#09B642
+country	Germany	#0ECF4E
+country	Ireland	#14E659
+country	Italy	#30E86D
+country	Netherlands	#4EE880
+country	Russia	#6BE994
+country	Slovakia	#87EAA8
+country	Spain	#A3EDBB
+country	Switzerland	#BDF0CD
+country	United Kingdom	#D6F5E0
+country	Canada	#000066
+country	Mexico	#0909B6
+country	Nicaragua	#3030E8
+country	Panama	#8787EA
+country	USA	#D6D6F5
+country	Australia	#8C07A7
+country	New Zealand	#DE98EC
+country	Argentina	#87032F
+country	Brazil	#E8306D
+country	Peru	#F0B8CA
+
+division		#660022
+division	Ngazidja	#8B3003
+division	Bandama Valley	#AD3F08
+division	Comoe	#CF4E0E
+division	Lagunes	#E95F1B
+division	Savanes	#E87A44
+division	Cairo	#E9946B
+division	Qalyubia	#EBAE91
+division	Kilifi	#EFC7B4
+division	Gauten	#F5E0D6
+division	Beijing	#627601
+division	Chongqing	#708503
+division	Guang Zhou	#7D9504
+division	Guangzhou	#8AA406
+division	Jinan	#96B209
+division	Kerala	#A3C10B
+division	Duhok, Kurdistan Region	#AFCF0E
+division	Aomori	#BBDC12
+division	Fukushima	#C7EA15
+division	Tokyo	#C9E927
+division	Amman	#CCE839
+division	Ulaanbaatar	#CEE84A
+division	Kathmandu	#D1E85B
+division	Alabang	#D4E96B
+division	Baguio	#D8EA7B
+division	Cebu	#DBEB8B
+division	Central Visayas	#DFEC9B
+division	Davao	#E3EEAA
+division	Davao Region	#E7F0B9
+division	Manila	#EBF2C8
+division	Ayuttaya	#F0F5D6
+division	Freiburg	#027E2B
+division	Pavia	#049534
+division	Novosibirsk	#07AB3E
+division	Catalonia	#0BC147
+division	BE	#10D551
+division	BL	#15EA5B
+division	BS	#30E86D
+division	Basel-Stadt	#4AE87E
+division	SO	#63E88F
+division	SZ	#7BEA9F
+division	VD	#93EBB0
+division	VS	#AAEEC0
+division	ZH	#C0F1D0
+division	Scotland	#D6F5E0
+division	Managua	#010171
+division	Arizona	#02027B
+division	Chicago, IL	#030386
+division	Connecticut	#040490
+division	Gainesville, Florida	#05059B
+division	Georgia	#0606A5
+division	Illinois	#0808AF
+division	Little Rock, Arkansas	#0A0AB8
+division	Massachusetts	#0C0CC2
+division	Milwaukee, WI	#0E0ECB
+division	Minnesota	#1010D5
+division	Nashville	#1212DE
+division	Nashville, Tennessee	#1515E7
+division	New York	#1E1EE9
+division	Oregon, Multnomah County	#2A2AE9
+division	Oregon,Washington County	#3636E8
+division	Pennsylvania	#4242E8
+division	Philadelphia, PA	#4D4DE8
+division	Pittsburgh, PA	#5959E8
+division	SE Wisconsin	#6464E9
+division	Seattle	#6F6FE9
+division	Tennessee	#7A7AE9
+division	Texas, Houston	#8585EA
+division	Texas/Houston	#8F8FEB
+division	WA	#9A9AEC
+division	Washington	#A4A4ED
+division	Washington, Island County	#AFAFEE
+division	Washington, King County	#B9B9F0
+division	Washington, Snohomish County	#C3C3F1
+division	Washington,King County	#CCCCF3
+division	Washington,Snohomish County	#D6D6F5
+division	Northern Territory	#8C07A7
+division	Queensland	#C013E2
+division	South Australia	#D054E8
+division	Victoria	#DE98EC
+division	Christchurch	#F0D6F5
+division	Buenos Aires	#750128
+division	Buenos Aires, Banfield	#84022D
+division	Buenos Aires, Campana	#930433
+division	Buenos Aires, Ezeiza	#A10639
+division	Buenos Aires, Grand Bourg	#AF083F
+division	Buenos Aires, Hurlingham	#BD0B45
+division	Buenos Aires, Ituzaingo	#CA0D4C
+division	Buenos Aires, Jose C. Paz	#D71152
+division	Buenos Aires, La Matanza	#E41458
+division	Buenos Aires, La Plata	#E91F61
+division	Buenos Aires, Lanus	#E8306D
+division	Buenos Aires, Lomas de Zamora	#E84177
+division	Buenos Aires, Rafael Castillo	#E85182
+division	Buenos Aires, San Martin	#E8618D
+division	Buenos Aires, San Miguel	#E97098
+division	Buenos Aires, Tortuguitas	#EA80A2
+division	Ciudad Autonoma de Buenos Aires	#EB8FAD
+division	Distrito Federal	#EC9EB7
+division	Rio de Janeiro	#EEACC2
+division	Lima	#F0BACC
+division	Loreto	#F2C8D6
+division	Piura	#F5D6E0
+
+location		#87032F
+location	Brasília	#E8306D
+location	Rio de Janeiro	#F0B8CA
+
+clade_truncated	A	#C50C0C
+clade_truncated	A.2	#C5690C
+clade_truncated	A.2.1	#C5C50C
+clade_truncated	A.3	#69C50C
+clade_truncated	A.3.1	#0CC50C
+clade_truncated	A.D	#0CC569
+clade_truncated	A.D.1	#0CC5C5
+clade_truncated	A.D.2	#0C69C5
+clade_truncated	A.D.3	#0C0CC5
+clade_truncated	A.D.4	#690CC5
+clade_truncated	A.D.5	#C50CC5
+
+clade	A	#C50C0C
+clade	A.2	#C5690C
+clade	A.2.1	#A7A707
+clade	A.2.1.1	#ECEC98
+clade	A.3	#69C50C
+clade	A.3.1	#07A707
+clade	A.3.1.1	#98EC98
+clade	A.D	#0CC569
+clade	A.D.1	#006666
+clade	A.D.1.1	#028484
+clade	A.D.1.10	#06A1A1
+clade	A.D.1.11	#0BBDBD
+clade	A.D.1.2	#11D7D7
+clade	A.D.1.3	#1FE9E9
+clade	A.D.1.4	#41E8E8
+clade	A.D.1.5	#61E8E8
+clade	A.D.1.6	#80EAEA
+clade	A.D.1.7	#9EECEC
+clade	A.D.1.8	#BAF0F0
+clade	A.D.1.9	#D6F5F5
+clade	A.D.2	#003366
+clade	A.D.2.1	#0C69C5
+clade	A.D.2.2	#54A0E8
+clade	A.D.2.2.1	#B8D4F0
+clade	A.D.3	#000066
+clade	A.D.3.1	#03038B
+clade	A.D.3.10	#0808AD
+clade	A.D.3.11	#0E0ECF
+clade	A.D.3.12	#1B1BE9
+clade	A.D.3.2	#4444E8
+clade	A.D.3.3	#6B6BE9
+clade	A.D.3.4	#9191EB
+clade	A.D.3.5	#B4B4EF
+clade	A.D.3.7	#D6D6F5
+clade	A.D.4	#5707A7
+clade	A.D.4.1	#C398EC
+clade	A.D.5	#660066
+clade	A.D.5.1	#B609B6
+clade	A.D.5.2	#E830E8
+clade	A.D.5.3	#EA87EA
+clade	A.D.5.4	#F5D6F5
+
+source	ITpS	#69C50C
+source	Pathoplexus	#690CC5
+
+data_use	OPEN	#0C88C5
+data_use	RESTRICTED	#C50C0C
+

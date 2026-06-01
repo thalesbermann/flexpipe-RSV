@@ -1,0 +1,89 @@
+files:
+  keep:          "config/keep.txt"
+  ignore:        "config/ignore.txt"
+  cache:         "config/cache_coordinates.tsv"
+  reference:     "config/reference.gb"
+  clades:        "config/clades.tsv"
+  auspice_config: "config/auspice_config.json"
+
+parameters:
+  mask_5prime: 44
+  mask_3prime: 155
+  mask_sites: "1"
+  ufboot: 1000
+  model: "MFP"
+  root: "least-squares"
+  coalescent: "skyline"
+  date_inference: "marginal"
+  divergence_units: "mutations"
+  clock_filter_iqd: 4
+  ancestral_inference: "joint"
+
+options:
+  threads: 5
+
+coordinates:
+  columns: "country division location"
+
+colours:
+  clade: "clade_truncated clade"
+  geo: "region country division location"
+  source: "source"
+  data_use: "data_use"
+
+traits:
+  columns: "country division location clade"
+
+subsampling:
+  random_seed: 42   # semente para reprodutibilidade; sequences_per_group e demais em subsample.yaml
+
+curation:
+  clade_levels: 3          # hierarchy levels for clade_truncated (RSV: A.D.3.3 → A.D.3)
+  clade_separator: "."     # separator used to split clade names
+
+# ── Fonte de dados remota ────────────────────────────────────────────────────
+# Use "pathoplexus" OU "ncbi" — nunca os dois ao mesmo tempo.
+data_source: "pathoplexus"
+
+pathoplexus:
+  organism: "rsv-a"
+  base_url: "https://lapis.pathoplexus.org"
+  metadata_endpoint: "details"
+  sequences_endpoint: "unalignedNucleotideSequences"
+  min_completeness: 0.70          # server-side completeness filter (reduces ~40K → ~13K)
+  # min_date: "2000-01-01"        # optional; falls back to subsampling.min_year if unset
+  # auth_token: ""                # deixar em branco se dados OPEN
+
+ncbi:
+  taxid: 12234                    # RSV-A; outros exemplos: 12233 RSV-B, 11520 Influenza A
+  genome_size: 15225              # tamanho da referência em bp
+  min_length: 0.7                 # mínimo como fração de genome_size
+  max_length: 1.1                 # máximo como fração de genome_size
+  email: ""                       # e-mail NCBI Entrez (recomendado; evita bloqueios)
+  api_key: ""                     # opcional; eleva rate limit para 10 req/s
+  # min_date: "2000-01-01"        # opcional; usa subsampling.min_year como fallback
+
+viralqc:
+  conda_env: "viralQC"
+  clade_column: "clade"
+  datasets_dir: "/home/thales/datasets"
+  blast_database: "/home/thales/datasets/blast.fasta"
+  blast_database_metadata: "/home/thales/datasets/blast.tsv"
+
+qc:
+  # ViralQC genomeQuality: A e B aprovados; C e D excluídos
+  genome_quality:
+    - "A"
+    - "B"
+  min_coverage: 0.70
+  required_columns:
+    - "strain"
+    - "date"
+    - "country"
+    - "clade"
+
+# Sequências locais do ITpS. enabled: false usa só Pathoplexus (testes/builds globais).
+local_sequences:
+  enabled: true
+  metadata: "data/metadata.xlsx"
+  sequences: "data/new_sequences.fasta"

@@ -1,0 +1,30 @@
+# Subsampling configuration for RSV-A — read by augur subsample
+#
+# focal   : ITpS surveillance + all Brazil sequences — kept in full (no subsampling)
+# context : Pathoplexus sequences outside Brazil — subsampled by country/year/clade_truncated
+#
+# query (focal)  restricts to ONLY matching sequences (≠ include_where, that rescues from filters)
+# include        forces extra strains regardless of other filters (config/keep.txt)
+# exclude        removes strains from all samples (config/ignore.txt)
+
+defaults:
+  min_date: 2000
+  exclude: config/ignore.txt
+
+samples:
+  focal:
+    query: "(source == 'ITpS') or (country == 'Brazil')"
+    include: config/keep.txt
+
+  context:
+    exclude_where:
+      - "source=ITpS"
+      - "country=Brazil"
+      - "country="
+      - "clade_truncated="
+      - "date="
+    group_by:
+      - country
+      - year
+      - clade_truncated
+    sequences_per_group: 4

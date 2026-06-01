@@ -1,0 +1,215 @@
+country	Argentina	-38.4161	-63.6167
+country	Australia	-25.2744	133.7751
+country	Austria	47.5162	14.5501
+country	Belgium	50.5039	4.4699
+country	Brazil	-14.235	-51.9253
+country	Canada	56.1304	-106.3468
+country	China	35.8617	104.1954
+country	Comoros	-11.6455	43.3333
+country	Cote d'Ivoire	7.54	-5.5471
+country	Egypt	26.8206	30.8025
+country	Finland	61.9241	25.7482
+country	France	46.2276	2.2137
+country	Germany	51.1657	10.4515
+country	Hong Kong	22.3193	114.1694
+country	India	20.5937	78.9629
+country	Ireland	53.1424	-7.6921
+country	Italy	41.8719	12.5674
+country	Japan	36.2048	138.2529
+country	Jordan	30.5852	36.2384
+country	Kenya	-0.0236	37.9062
+country	Kuwait	29.3117	47.4818
+country	Lebanon	33.8547	35.8623
+country	Mexico	23.6345	-102.5528
+country	Mongolia	46.8625	103.8467
+country	Nepal	28.3949	84.124
+country	Netherlands	52.1326	5.2913
+country	New Zealand	-40.9006	174.886
+country	Nicaragua	12.8654	-85.2072
+country	Panama	8.538	-80.7821
+country	Peru	-9.19	-75.0152
+country	Philippines	12.8797	121.774
+country	Russia	61.524	105.3188
+country	Slovakia	48.669	19.699
+country	South Africa	-30.5595	22.9375
+country	South Korea	35.9078	127.7669
+country	Spain	40.4637	-3.7492
+country	Sri Lanka	7.8731	80.7718
+country	Switzerland	46.8182	8.2275
+country	Taiwan	23.6978	120.9605
+country	Thailand	15.87	100.9925
+country	Tunisia	33.8869	9.5375
+country	United Kingdom	55.3781	-3.436
+country	USA	37.0902	-95.7129
+country	Viet Nam	14.0583	108.2772
+country	Zambia	-13.1339	27.8493
+country	Iraq	33.0955793	44.1749775
+country	Cameroon	4.6125522	13.1535811
+division	unknown	-14.235	-51.9253
+division	Distrito Federal	-15.7998	-47.8645
+division	Rio de Janeiro	-22.9068	-43.1729
+division	Milwaukee, WI	43.0298809	-87.9201256
+division	Nashville, Tennessee	36.1679249	-86.8271487
+division	Chongqing	30.05518	107.8748712
+division	Freiburg	47.9960901	7.8494005
+division	SE Wisconsin	35.073372	-106.5515191
+division	Pavia	45.0368546	9.1378251
+division	Tennessee	35.7730076	-86.2820081
+division	Loreto	-5.0	-75.0
+division	Lima	-12.0459808	-77.0305912
+division	Piura	-5.0	-80.333333
+division	Guangzhou	23.1288454	113.2590064
+division	Guang Zhou	21.2737079	110.3548318
+division	Amman	31.9515694	35.9239625
+division	Christchurch	-43.530955	172.6364343
+division	Fukushima	37.760777	140.4745807
+division	Tokyo	35.6768601	139.7638947
+division	Kanagawa	35.4342935	139.374753
+division	Managua	12.1547116	-86.273725
+division	Seattle	47.6038321	-122.330062
+division	Little Rock, Arkansas	34.7223681	-92.3383026
+division	Nashville	36.1622767	-86.7742984
+division	Ciudad Autonoma de Buenos Aires	-34.6095579	-58.3887904
+division	Buenos Aires	-34.6095579	-58.3887904
+division	Buenos Aires, Lomas de Zamora	-34.7572582	-58.4026638
+division	Buenos Aires, Grand Bourg	-34.4885224	-58.7265324
+division	Buenos Aires, Lanus	-34.7073871	-58.3905998
+division	Buenos Aires, Bella Vista	-34.5684085	-58.6894883
+division	Buenos Aires, Lomas del Mirador	-34.663145	-58.5288492
+division	Buenos Aires, Moreno	-34.6396556	-58.7898326
+division	Buenos Aires, Merlo	-34.6604988	-58.7321695
+division	Buenos Aires, San Miguel	-34.543006	-58.711966
+division	Buenos Aires, Florencio Varela	-34.8044384	-58.2783224
+division	Buenos Aires, Campana	-34.1636631	-58.9586837
+division	Buenos Aires, La Matanza	-34.9133471	-58.3392229
+division	Buenos Aires, Los Polvorines	-34.5106413	-58.699072
+division	Buenos Aires, Malvinas Argentinas	-34.8187342	-58.4240051
+division	Buenos Aires, Ituzaingo	-34.6583293	-58.6671441
+division	Buenos Aires, Garin	-34.4215728	-58.7366518
+division	Buenos Aires, San Martin	-34.5771577	-58.5377237
+division	Buenos Aires, Pilar	-34.4570918	-58.9141609
+division	Buenos Aires, Tortuguitas	-34.4705116	-58.7587082
+division	Buenos Aires, Jose C. Paz	-34.511906	-58.7776777
+division	Buenos Aires, Escobar	-34.3453213	-58.7950701
+division	Buenos Aires, Tigre	-34.4235341	-58.5817628
+division	Buenos Aires, Banfield	-34.7437455	-58.3960811
+division	Buenos Aires, Gernica	-34.9963664	-58.3773589
+division	Buenos Aires, San Pedro	-33.6760716	-59.6629342
+division	Buenos Aires, Temperley	-34.7758816	-58.3971199
+division	Buenos Aires, Ezeiza	-34.8168141	-58.5474234
+division	Buenos Aires, Laferrere	-34.7506177	-58.584369
+division	Buenos Aires, Hurlingham	-34.5933423	-58.6378405
+division	Buenos Aires, Rafael Castillo	-34.6996518	-58.6308765
+division	Buenos Aires, Don Torcuato	-34.4886587	-58.6266492
+division	Buenos Aires, Gonzalez Catan	-34.769249	-58.6480318
+division	Buenos Aires, Suipacha	-34.7733304	-59.690381
+division	Baguio	16.4119905	120.5933719
+division	Davao	7.0648306	125.6080623
+division	Cebu	10.47	123.83
+division	Manila	14.5904492	120.9803621
+division	Kilifi	-3.1507392	39.6750716
+division	WA	47.2868352	-120.212613
+division	Massachusetts	42.3788774	-72.032366
+division	Arizona	34.395342	-111.763275
+division	Washington	38.8950982	-77.0363849
+division	Washington, King County	47.4873376	-121.8622122
+division	Washington, Snohomish County	48.0074736	-121.7304882
+division	Washington, Kitsap County	47.594502	-122.6474421
+division	Washington, Island County	48.2162669	-122.6842402
+division	Oregon, Multnomah County	45.5093799	-122.4006413
+division	Oregon, Washington County	45.5601883	-123.0587907
+division	Washington, Clark County	45.7669047	-122.4940866
+division	Oregon, Clackamas County	45.1608821	-122.2305038
+division	Oregon,Multnomah County	45.5093799	-122.4006413
+division	Washington,King County	47.4873376	-121.8622122
+division	Washington,Snohomish County	48.0074736	-121.7304882
+division	Washington,Clark County	45.7669047	-122.4940866
+division	Oregon,Clackamas County	45.1608821	-122.2305038
+division	Oregon,Washington County	45.5601883	-123.0587907
+division	Minnesota	45.9896587	-94.6113288
+division	Washington, Pierce County	47.0022547	-122.2117983
+division	Philadelphia, PA	39.9776543	-75.1739615
+division	Texas	31.2638905	-98.5456116
+division	New York	40.7127281	-74.0060152
+division	Nebraska	41.7370229	-99.5873816
+division	Alaska	64.4459613	-149.680909
+division	Missouri	38.7604815	-92.5617875
+division	Aomori	40.886943	140.590121
+division	Montana	47.3752671	-109.638757
+division	South Carolina	33.6874388	-80.4363743
+division	New Mexico	34.5802074	-105.996047
+division	California	36.7014631	-118.755997
+division	Wyoming	43.1700264	-107.568534
+division	Oklahoma	34.9550817	-97.2684063
+division	North Dakota	47.6201461	-100.540737
+division	Kentucky	37.5726028	-85.1551411
+division	Novosibirsk	54.9678145	82.9515989
+division	Washington, Skagit County	48.4596092	-121.7332784
+division	Beijing	39.9057136	116.3912972
+division	Virginia	37.1232245	-78.4927721
+division	Scotland	56.7861112	-4.1140518
+division	Buenos Aires, La Plata	-34.9206797	-57.9537638
+division	Washington,Whatcom County	48.8107819	-121.8828175
+division	Washington,Yakima County	46.4135961	-120.730253
+division	Washington,Island County	48.2162669	-122.6842402
+division	Washington,Walla Walla County	46.2055155	-118.5174284
+division	Washington,Pierce County	47.0022547	-122.2117983
+division	Pittsburgh, PA	40.4507364	-80.0248219
+division	Basel-Stadt	47.5579097	7.5927728
+division	Catalonia	41.8523094	1.5745043
+division	Illinois	40.0796606	-89.4337288
+division	Gainesville, Florida	29.6411884	-82.3562296
+division	BS	47.5579097	7.5927728
+division	VD	46.6356963	6.5320717
+division	BE	46.8382351	7.6004502
+division	VS	46.2303063	7.6605757
+division	ZH	47.4133024	8.656394
+division	Connecticut	41.6500201	-72.7342163
+division	Northern Territory	-19.8516101	133.2303375
+division	Queensland	-22.1646782	144.5844903
+division	South Australia	-30.5343665	135.6301212
+division	Victoria	-36.5986096	144.6780052
+division	Western Australia	-25.2303005	121.0187246
+division	Lagunes	5.8451583	-4.2931136
+division	Montagnes	6.9418251	-7.6541621
+division	Savanes	9.5652587	-5.5594265
+division	Comoe	6.0762474	-3.3082115
+division	Bas-Sassandra	5.3523063	-6.6766897
+division	Cairo	30.0443879	31.2357257
+division	Qalyubia	30.3336293	31.2213569
+division	Ulaanbaatar	47.9184676	106.9177016
+division	Kathmandu	27.708317	85.3205817
+division	Alabang	14.4190326	121.044338
+division	Central Visayas	10.4734504	123.8648083
+division	Soccsksargen	6.5647277	124.4840255
+division	Davao Region	6.6481392	125.3562143
+division	Ayuttaya	13.7719158	100.5036788
+division	Wuxi	31.5776626	120.2952752
+division	Jilin, Changchun	43.8844844	125.3181675
+division	GR	46.6960615	9.6027351
+division	AG	47.412396	8.1948321
+division	SO	47.31874	7.6698284
+division	BL	47.5092938	7.6588333
+division	SZ	47.0571976	8.7222073
+division	GE	46.2256509	6.1439209
+division	SG	47.1561047	9.338323
+division	Ngazidja	-11.6525687	43.3309706
+division	Texas/Houston	29.7536089	-95.3596509
+division	Jinan	36.6519754	117.1138479
+division	Texas, Houston	29.7589382	-95.3676974
+division	Pennsylvania	40.9699889	-77.7278831
+division	Ohio	40.2253569	-82.6881395
+division	North Carolina	35.6729639	-79.0392919
+division	Wisconsin	44.4308975	-89.6884637
+division	Georgia	32.3293809	-83.1137366
+division	Kerala	10.3528744	76.5120396
+division	Tasmania	-42.035067	146.6366887
+division	New South Wales	-31.8759835	147.2869493
+division	Duhok, Kurdistan Region	37.132294	42.895254
+division	Chicago, IL	41.9309531	-87.7725545
+division	Bandama Valley	7.23	-5.69
+division	Gauten	-26.27	28.11
+division	Rochester, NY	43.1429026	-77.713702
+location	unknown	-14.235	-51.9253
+location	Brasília	-15.7939	-47.8828
+location	Rio de Janeiro	-22.9068	-43.1729
