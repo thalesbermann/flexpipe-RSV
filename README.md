@@ -60,7 +60,7 @@ Local ITpS sequences (in `data/new_sequences.fasta` + `data/metadata.xlsx`) are 
 
 ## Stage 2 — QC and Curation
 
-**ViralQC** (BLAST + Nextclade) assigns genome quality grades (A–D) and clade labels to every sequence. The `curate.py` script then:
+[ViralQC](https://github.com/InstitutoTodosPelaSaude/viralQC) (BLAST + Nextclade) assigns genome quality grades (A–D) and clade labels to every sequence. The `curate.py` script then:
 
 - Renames and standardises metadata fields (`strain`, `date`, `country`, `division`, `location`, `data_use`, `clade`)
 - Truncates clade names to a configurable number of hierarchy levels (`clade_levels`) for display grouping
